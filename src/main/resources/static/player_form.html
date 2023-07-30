@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <script src="js/PlayerPage.js"></script>
+</head>
+<body>
+    <div class="col-md-6">
+        <form class="form-inline">
+
+            <table>
+                <thead></thead>
+                <tr>
+                    <th><label for="name">Имя: </label></th>
+                    <th><input type="text" id="name" class="form-control" placeholder="Имя футболиста..."><br></th>
+                </tr>
+                <tr>
+                    <th><label for="surname">Фамилия: </label></th>
+                    <th><input type="text" id="lastname" class="form-control" placeholder="Фамилия футболиста..."></th>
+                </tr>
+                <tr>
+                    <th><label for="gender">Пол: </label></th>
+                    <th>
+                        <select id="gender">
+                            <option>Мужской</option>
+                            <option>Женский</option>
+                        </select>
+
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="birth">Дата рождения: </label></th>
+                    <th><input type="date" id="birth" name="date"/></th>
+                </tr>
+                <tr>
+                    <th><label for="team">Команда: </label></th>
+                    <th>
+                        <select id="team">
+                        </select>
+                    </th>
+                    <th>
+                        
+                        <button type="button" id="add_team" class="btn btn-default">+</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="country">Страна: </label></th>
+                    <th>
+                        <select if="country">
+                        </select></th>
+                    </th>
+                </tr>
+            </table>
+
+            <button id="send" class="btn btn-default" type="submit">Добавить</button>
+        </form>
+    </div>
+
+</body>
+</html>
