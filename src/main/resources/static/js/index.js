@@ -1,5 +1,8 @@
 const baseUrl = "http://localhost:8080/get_players";
 
+
+
+
 async function getPlayers() {
     const response = await fetch(baseUrl);
     players = await response.json();
@@ -9,8 +12,6 @@ async function getPlayers() {
         playerTohtml(players[i]);
     }
   }
-
-
 
 getPlayers();
 
@@ -35,12 +36,23 @@ for(i=0; i< players.length;i++){
 function playerTohtml(player){
     player.name;
     console.log(player);
-    let line = "<td>" + player.id + " </td>\n";
-    line += "<td>" + player.name + " </td>\n";
-    line += "<td>" + player.lastname + " </td>\n";
-    line += "<td>" + player.gender + " </td>\n";
-    line += "<td>" + player.birthDate + " </td>\n";
-    line += "<td>" + player.country + " </td>\n";
+    let line = "";
+    for (const x in player) {
+        if(x == "team") continue;
+        line+="<td>" + ( player[x] == null ? "" : player[x]) + "</td>\n";
+    }
+    // player.id
+    // line += addTableRow(player.id);
+    // line += addTableRow(player.name);
+    // line += addTableRow(player.lastname);
+    // line += addTableRow(player.gender);
+    // line += addTableRow(player.birthDate);
+    // line += addTableRow(player.country);
 
     $("#main_table").append("<tr>"+ line + "</tr>");
 }
+
+function addTableRow(obj){
+    return 
+}
+
