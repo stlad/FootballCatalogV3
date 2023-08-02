@@ -5,24 +5,38 @@
     <title>Игроки и команды</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/player_form.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
     <script type="module" src="js/index.js"></script>
     <script type="module" src="js/index_ws.js"></script>
-    <script type="module" src="js/html_cunstructor.js"></script>
 
 </head>
 
 
 <body>
-    <div id="player-area" class="player-area">
-        
-    
-    
-    </div>
-        <div id="break-line"></div>
-        <input id="add-player" type="button" value="+" />
-    
-    
+    <table>
+        <tr>
+            <td>
+                <div id="player-area" class="player-area">
+                </div>
+            </td>
+            <td>
 
+                <div class="form-container" id="form-container">
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+
+            <td colspan="2">
+                <div id="break-line"></div>
+                <input id="add-player" type="button" value="+" />
+            </td>
+        </tr>
+    </table>
+
+        
+        
 </body>

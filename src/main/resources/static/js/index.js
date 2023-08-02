@@ -1,4 +1,4 @@
-import append_player_cell from "./html_cunstructor.js";
+import { append_player_cell, add_player_form,load_player_to_edit_form } from "./html_cunstructor.js";
 const baseUrl = "http://localhost:8080";
 
 
@@ -8,6 +8,7 @@ let players = [];
 getPlayers();
 
 $(function () {
+    add_player_form();
     $( "#add-player" ).click(() => {
         //console.log(baseUrl + "/player_edit");
         //selected_player_id = -1;
@@ -32,13 +33,9 @@ async function getPlayers() {
     for(let i=0; i< players.length;i++){
         //console.log(i);
         append_player_cell(players[i]);
-
         $(`#${players[i].id}`).on( "click", ()=>{
-            //elected_player_id = players[i].id;
-            console.log(players[i].id);
-            window.localStorage.setItem("selected_player_id", players[i].id);
-            window.location.href = baseUrl+"/player_edit";
-
+            console.log("current id is: "+ players[i].id);
+            load_player_to_edit_form(players[i]);
         })
     }
   }
