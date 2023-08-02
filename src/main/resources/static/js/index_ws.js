@@ -1,4 +1,4 @@
-
+import append_player_cell from "./html_cunstructor.js";
 
 const stompClient = new StompJs.Client({
     brokerURL: 'ws://localhost:8080/ws'
@@ -14,7 +14,7 @@ stompClient.onConnect = (frame) => {
     console.log("subscribing to:" +" /topic");
     stompClient.subscribe("/topic", (player) => {
         console.log(player);
-        playerTohtml(JSON.parse(player.body));
+        append_player_cell(JSON.parse(player.body));
     });
 
 };

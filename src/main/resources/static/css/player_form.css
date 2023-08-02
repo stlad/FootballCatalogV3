@@ -1,0 +1,25 @@
+.form-container{
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 10%;
+    padding: 50px;
+    background-color: #c3ddc3;
+}
+
+.player_edit_form{
+    width: 480px;
+}
+
+
+.field{
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.gender-field{
+    width:5em;
+    display: inline-block;
+}
+.country-field{
+    width:10em;
+}
